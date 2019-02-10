@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { HOME_PAGE } from "./queries";
 import styled from "styled-components";
 import Movie from "./Movie";
+import Navbar from "./Navbar";
 
 const Container = styled.div`
   display: grid;
@@ -17,6 +18,7 @@ const Home = () => (
     <Helmet>
       <title>Home | MovieQL</title>
     </Helmet>
+    <Navbar />
     <Query query={HOME_PAGE}>
       {({ loading, data, error }) => {
         if (loading) return "loading";

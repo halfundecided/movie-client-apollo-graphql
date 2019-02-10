@@ -4,7 +4,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const Card = styled.div`
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   background-image: ${props => `url(${props.background})`};
   background-size: cover;
@@ -38,7 +38,7 @@ const Movie = ({ id, title, rating, poster }) => (
 );
 
 Movie.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
   poster: PropTypes.string.isRequired

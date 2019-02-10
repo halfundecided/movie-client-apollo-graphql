@@ -2,8 +2,8 @@ import React from "react";
 import { Query } from "react-apollo";
 import { MOVIE_DETAILS } from "./queries";
 import { Helmet } from "react-helmet";
-import styled from "styled-components";
 import Movie from "./Movie";
+import styled from "styled-components";
 
 const Container = styled.div`
   display: grid;
@@ -39,11 +39,11 @@ const MovieContainer = styled.div`
 `;
 
 const Detail = ({
-    match: {
-        params: { movieId }
-    }
+  match: {
+    params: { movieId }
+  }
 }) => (
-    <Query query={MOVIE_DETAILS} variables={{ movieId }}>
+  <Query query={MOVIE_DETAILS} variables={{ movieId }}>
     {({ loading, error, data }) => {
       if (loading)
         return (
