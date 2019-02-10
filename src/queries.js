@@ -7,6 +7,7 @@ query {
         id
         title
         genres
+        rating
     }
 }
 `;
