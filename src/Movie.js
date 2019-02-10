@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import PropTypes from "prop-types";
 
 const Card = styled.div`
   border-radius: 15px;
@@ -36,5 +36,12 @@ const Movie = ({ id, title, rating, poster }) => (
     </Card>
   </Link>
 );
+
+Movie.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+  poster: PropTypes.string.isRequired
+};
 
 export default Movie;

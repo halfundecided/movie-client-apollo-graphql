@@ -3,6 +3,7 @@ import { Query } from "react-apollo";
 import { MOVIE_DETAILS } from "./queries";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
+import Movie from "./Movie";
 
 const Container = styled.div`
   display: grid;
